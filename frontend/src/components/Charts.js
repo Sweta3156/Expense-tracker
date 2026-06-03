@@ -14,8 +14,7 @@ const COLORS = {
 const formatINR = (value) => `₹${value.toLocaleString('en-IN')}`;
 
 const Charts = () => {
-  const { transactions, income, expense } = useTransactions();
-
+const { transactions } = useTransactions();
   // Category breakdown for expenses
   const categoryData = transactions
     .filter((t) => t.type === 'expense')
